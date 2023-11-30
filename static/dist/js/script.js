@@ -31,7 +31,6 @@ function getChatHistory() {
     return Array.from(infoBlocks).map(block => block.innerHTML);
 }
 
-
 async function fetchPromptResponse(prompt) {
     const response = await fetch("/prompt", {
         method: "POST",
@@ -76,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const gptOutput = addToLog("GPT est en train de réfléchir...");
             const reader = await fetchPromptResponse(prompt);
             await readResponseChunks(reader, gptOutput);
+            form.elements.prompt.value = '';
         } catch (error) {
             console.error('Une erreur est survenue:', error);
         } finally {
