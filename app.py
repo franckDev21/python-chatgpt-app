@@ -2,10 +2,7 @@ import os
 from openai import OpenAI
 
 from dotenv import load_dotenv
-from flask import Flask
-from flask import Response
-from flask import render_template
-from flask import request
+from flask import Flask, Response, render_template, request
 
 load_dotenv()
 
