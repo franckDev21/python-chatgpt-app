@@ -17,7 +17,7 @@ def home():
 @app.route('/prompt', methods=['POST'])
 def prompt():
     messages = request.json['messages']
-    conversation = build_conversation_dict(messages=messages)
+    conversation = build_conversation_dict(messages)
 
     return Response(event_stream(conversation), mimetype='text/event-stream')
 

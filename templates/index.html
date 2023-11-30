@@ -6,8 +6,9 @@
     <title>ChatGPT Clone</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='dist/images/icon.png') }}" type="image/png">
-    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script defer src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
 </head>
 <body>
@@ -62,6 +63,6 @@
     </form>
 </main>
 
-<script src="{{ url_for('static', filename='dist/js/script.js') }}"></script>
+<script defer src="{{ url_for('static', filename='dist/js/script.js') }}"></script>
 </body>
 </html>
